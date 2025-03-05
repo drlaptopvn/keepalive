@@ -83,6 +83,6 @@ app.whenReady().then(() => {
     },
   ]);
 
-  tray.setToolTip("Random API Caller");
+  tray.setToolTip("Keep A Live Free Host");
   tray.setContextMenu(contextMenu);
 });
