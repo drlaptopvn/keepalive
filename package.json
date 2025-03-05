@@ -1,22 +1,35 @@
 {
-  "name": "keep-a-live",
+  "name": "keepalive-main",
   "version": "1.0.0",
+  "license": "MIT",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "dev": "electron .",
     "build": "electron-builder"
   },
   "devDependencies": {
     "electron": "^28.2.3",
-    "electron-builder": "^25.1.8"
+    "electron-builder": "^24.9.1"
   },
   "dependencies": {
-    "node-fetch": "^2.7.0"
+    "node-fetch": "^2.6.1"
   },
   "build": {
     "appId": "com.example.keepalive",
     "win": {
-      "target": "portable"
-    }
+      "target": "portable",
+      "icon": "icon.ico"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "icon.ico"
+    ],
+    "extraResources": [
+      {
+        "from": "tray-icon.ico",
+        "to": "tray-icon.ico"
+      }
+    ]
   }
 }
